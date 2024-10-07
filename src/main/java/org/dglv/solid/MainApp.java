@@ -12,8 +12,8 @@ public class MainApp {
         Circle circle = new Circle(10);
         Square square = new Square(10, 20);
         Cube cube = new Cube(10);
-        NoShape noShape = new NoShape();
-        List<Shape> shapes = List.of(circle, square, cube, noShape);
+
+        List<Shape> shapes = List.of(circle, square, cube);
 
         double sum = AreaCalculator.sum(shapes);
         String json = ShapePrinter.json(sum);
