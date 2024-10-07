@@ -1,9 +1,6 @@
 package org.dglv.solid;
 
-import org.dglv.solid.model.Circle;
-import org.dglv.solid.model.Cube;
-import org.dglv.solid.model.Shape;
-import org.dglv.solid.model.Square;
+import org.dglv.solid.model.*;
 import org.dglv.solid.utils.AreaCalculator;
 import org.dglv.solid.utils.ShapePrinter;
 
@@ -15,7 +12,8 @@ public class MainApp {
         Circle circle = new Circle(10);
         Square square = new Square(10, 20);
         Cube cube = new Cube(10);
-        List<Shape> shapes = List.of(circle, square, cube);
+        NoShape noShape = new NoShape();
+        List<Shape> shapes = List.of(circle, square, cube, noShape);
 
         double sum = AreaCalculator.sum(shapes);
         String json = ShapePrinter.json(sum);
