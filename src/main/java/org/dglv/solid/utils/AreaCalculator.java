@@ -5,13 +5,11 @@ import org.dglv.solid.model.Square;
 
 import java.util.List;
 
-/*
-    Single Responsibility Principle (SRP) is broken!
-    Too many purposes in a single class. Class name is Area Calculator, but it does sum calculation as well as
-    provides pretty formatting in various formats (json, csv).
- */
-public class AreaCalculator {
-    public double sum(List<Object> shapes) {
+public final class AreaCalculator {
+    private AreaCalculator() {
+    }
+
+    public static double sum(List<Object> shapes) {
         double sum = 0;
 
         for (Object shape : shapes) {
@@ -27,15 +25,5 @@ public class AreaCalculator {
         }
 
         return sum;
-    }
-
-    // This method should be moved to its own class.
-    public String json(List<Object> shapes) {
-        return "{sum: %.3f}".formatted(sum(shapes));
-    }
-
-    // This method should be moved to its own class as well.
-    public String csv(List<Object> shapes) {
-        return "sum, %.3f".formatted(sum(shapes));
     }
 }
