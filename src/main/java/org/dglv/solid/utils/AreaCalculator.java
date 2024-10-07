@@ -5,11 +5,7 @@ import org.dglv.solid.model.Shape;
 
 import java.util.List;
 
-public final class AreaCalculator {
-
-    private AreaCalculator() {
-
-    }
+public record AreaCalculator() {
 
     public static double sum(List<Shape> shapes) {
         return shapes.stream()

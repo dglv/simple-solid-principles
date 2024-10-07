@@ -1,8 +1,6 @@
 package org.dglv.solid.utils;
 
-public final class ShapePrinter {
-    private ShapePrinter() {
-    }
+public record ShapePrinter() {
 
     public static String json(double sum) {
         return "{sum: %.3f}".formatted(sum);
