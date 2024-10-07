@@ -7,4 +7,9 @@ public record Cube(int length) implements Shape {
     public double area() {
         return Math.pow(length, 2);
     }
+
+    @Override
+    public double volume() {
+        return 0;
+    }
 }
