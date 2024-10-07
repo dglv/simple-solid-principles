@@ -15,7 +15,11 @@ public class MainApp {
         List<Object> shapes = List.of(circle, square);
 
         double sum = areaCalculator.sum(shapes);
+        String json = areaCalculator.json(shapes);
+        String csv = areaCalculator.csv(shapes);
 
-        System.out.println("sum = " + sum);
+        System.out.printf("sum = %.3f\n", sum);
+        System.out.println(json);
+        System.out.println(csv);
     }
 }
