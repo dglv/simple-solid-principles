@@ -7,9 +7,4 @@ public record Circle(int radius) implements Shape {
     public double area() {
         return Math.PI * Math.pow(radius, 2);
     }
-
-    @Override
-    public double volume() {
-        return 0;
-    }
 }

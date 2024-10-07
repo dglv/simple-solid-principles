@@ -7,9 +7,4 @@ public record Square(int lengthA, int lengthB) implements Shape {
     public double area() {
         return lengthA * lengthB;
     }
-
-    @Override
-    public double volume() {
-        return 0;
-    }
 }
